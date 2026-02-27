@@ -1,7 +1,6 @@
 from utils.colors import *
 import os
 
-
 def execute():
     courses_path = os.path.join('data', 'lectures')
     if not os.path.exists(courses_path):
