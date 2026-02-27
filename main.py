@@ -17,8 +17,6 @@ course = "https://git.ir/pluralsight-clean-architecture-patterns-practices-and-p
 course_title = course.split("git.ir/")[1]
 driver.get(course)
 
-
-
 wait = WebDriverWait(driver, 20)
 
 # صبر کوتاه برای لود اولیه
@@ -61,13 +59,15 @@ return results;
 
 data = driver.execute_script(script)
 
+print(data)
+
 # ---------- نمایش ----------
 for item in data:
     print(f"{item['section']} -> {item['title']} -> {item['dataItem']}")
 
 # ---------- ذخیره به CSV ----------
-os.makedirs("lectures", exist_ok=True)  # ✅ ایجاد پوشه اگر وجود ندارد
-file_path = os.path.join("lectures", f"course-{course_title}.csv")
+os.makedirs("data/lectures", exist_ok=True)  # ✅ ایجاد پوشه اگر وجود ندارد
+file_path = os.path.join('data', "lectures", f"course-{course_title}.csv")
 
 with open(file_path, "w", encoding="utf-8", newline="") as f:
     writer = csv.DictWriter(f, fieldnames=["section", "title", "dataItem", "dataIndex"])

@@ -1,5 +1,6 @@
 lectures
 lectures/
+data
 venv
 venv/*
 .idea
