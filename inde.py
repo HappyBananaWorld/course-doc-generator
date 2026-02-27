@@ -2,7 +2,7 @@ import time
 from utils.colors import *
 import utils.banners
 from utils.menu import show_menu
-from actions import get_course_action, update_cookie_action
+from actions import get_course_action, update_cookie_action, add_course_action
 from utils.echo import echo
 from utils.cookie_parser import parse_cookie
 
@@ -13,7 +13,7 @@ if option == 1:
 elif option == 2:
     update_cookie_action.execute()
 elif option == 3:
-    echo(f"{YELLOW}🍪 Cookie update feature coming soon!{RESET}")
+    add_course_action.execute()
 elif option == 0:
     echo(f"{RED}👋 Bye!{RESET}")
 else:
