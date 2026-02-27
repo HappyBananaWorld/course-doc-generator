@@ -4,7 +4,7 @@ import utils.banners
 from utils.menu import show_menu
 from actions import get_course_action, update_cookie_action
 from utils.echo import echo
-
+from utils.cookie_parser import parse_cookie
 
 option = show_menu()
 
